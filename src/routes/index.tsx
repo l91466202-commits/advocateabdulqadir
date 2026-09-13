@@ -18,7 +18,7 @@ function useTypewriter(text: string, speed = 38, startDelay = 600) {
   const [displayed, setDisplayed] = useState("");
 
   useEffect(() => {
-    let intervalId: ReturnType<typeof setInterval> | undefined;
+    let intervalId: number | undefined;
     const timeoutId = window.setTimeout(() => {
       let index = 0;
       intervalId = window.setInterval(() => {
@@ -230,6 +230,7 @@ function Index() {
         id="main"
         className="relative z-[2] flex h-screen flex-col justify-end overflow-hidden px-5 pb-12 sm:px-8 md:justify-center md:px-10 md:pb-0"
       >
+        <h1 className="sr-only">Mainframe</h1>
         <div className="relative z-10 max-w-xl">
           <p className="mb-5 select-none text-fluid-body leading-[1.3] font-normal blur-[4px] sm:mb-6" aria-hidden="true">
             Hey there, meet A.R.I.A,
